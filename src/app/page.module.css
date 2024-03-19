@@ -160,12 +160,14 @@
 }
 
 .imageMobile{
+  display: inline-block;
   @media (min-width: 1030px) {
     display: none;
   }
 }
 
 .imageDesk{
+  display: none;
   @media (max-width: 1030px) {
     display: none;
   }
