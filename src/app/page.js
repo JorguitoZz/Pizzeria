@@ -25,18 +25,15 @@ export default function page() {
                         <p className={`${montserrat.className} ${styles.section_parrafo}`}>Donec quis lorem nulla. Nunc eu odio mi. Morbi nec lobortis est. Sed fringilla, nunc sed imperdiet lacinia, nisl ante egestas mi, ac facilisis ligula sem id neque.
                         </p>
                     </div>
-                    <Image 
-                        src="/img1.webp"
-                        width={344}
-                        height={214}
-                        className={styles.imageMobile}
-                    />
-                    <Image 
-                        src="/rectangle-5-65e786dd3b346.webp"
-                        className={styles.imageDesk}
-                        width={562}
-                        height={358}
-                    />
+                    <div className={styles.imgContain}>
+                        <Image 
+                            src="/rectangle-5-65e786dd3b346.webp"
+                            fill   
+                        />
+
+                    </div>
+                    
+
                 </section>
                 
                 <section className={styles.section2}>
@@ -48,18 +45,13 @@ export default function page() {
                         <h2 className={`${lobster.className} ${styles.section_title2}`}>Ordena desde la comodidad de tu hogar,<spam className="section1_spam">contamos con un excelente delivery</spam></h2>
                         <button className={`buttom1 ${montserrat.className}`}>Ordenar</button>
                     </div>
-                    <Image 
-                        src="/img2.webp"
-                        width={344}
-                        height={214}
-                        className={styles.imageMobile}
-                    />
-                    <Image 
-                        src="/rectangle-14-65e786de0a82e.webp"
-                        className={styles.imageDesk}
-                        width={562}
-                        height={358}
-                    />
+                    <div className={styles.imgContain}>
+                        <Image 
+                                src="/rectangle-14-65e786de0a82e.webp"
+                                fill   
+                        />
+                    </div>
+
                 </section>
 
                 <section className={styles.section4}>
@@ -67,20 +59,14 @@ export default function page() {
                 </section>
 
                 <section className={styles.sectiontipo1}>
-                    <Image 
-                        src="/img3.webp"
-                        width={344}
-                        height={214}
-                        className={styles.imageMobile}
-                    />
-                    <Image 
-                        src="/rectangle-15-65e786df5f6d9.webp"
-                        className={styles.imageDesk}
-                        width={562}
-                        height={358}
-                    />
+                    <div className={styles.imgContain}>
+                        <Image 
+                            src="/rectangle-15-65e786df5f6d9.webp"
+                            fill   
+                        />
+                    </div>
                     
-                    <div>
+                    <div className={styles.divsection2}>
                         <h2 className={`${lobster.className} ${styles.section_title}`}>Acompaña con una <spam className="section1_spam">pizza</spam> esos <spam className="section1_spam">momentos especials</spam></h2>
                         <p className={`${montserrat.className} ${styles.section_parrafo}`}>Donec quis lorem nulla. Nunc eu odio mi. Morbi nec lobortis est. Sed fringilla, nunc sed imperdiet lacinia, nisl ante egestas mi, ac facilisis ligula sem id neque.
                         </p>
