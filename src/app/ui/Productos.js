@@ -1,15 +1,11 @@
+import { Producto } from "./Producto";
 
-export function Productos({ categorias }) {
-
-    const categoriaActiva = categorias.find(categoria => categoria.active);
-  
-
-    return(
-        <>
-            {categoriaActiva.name === 'Pizzas'  && <p>Pizza</p>}
-            {categoriaActiva.name === 'Combos' && <p>Combos</p>}
-            {categoriaActiva.name === 'Entradas' && <p>Entradas</p>}
-            {categoriaActiva.name === 'Bebidas' && <p>Bebidas</p>}
-        </>
-    )
-}
+export function Productos({ categoria }) {
+    // ... Renderiza la lista de productos filtrada por categoría
+    return (
+      <div>
+        <h1>{categoria}</h1>
+        <Producto />
+      </div>
+    );
+  }

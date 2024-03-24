@@ -1,8 +1,9 @@
 'use client'
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { lobster } from "./fonts"
 import './ui.css'
 import { Productos } from "./Productos"
+import { useParams, usePathname, useSearchParams, useRouter } from "next/navigation"
 
 const opciones = [
   {name: 'Pizzas', active: true},
@@ -12,8 +13,7 @@ const opciones = [
 ]
 
 
-export function Pagination(){
-
+const useCategorias = (opciones)=>{
   const [categorias, setCategorias] = useState(opciones)
 
   const changeActive = (name) =>{
@@ -26,8 +26,26 @@ export function Pagination(){
 
   }
 
+  
 
-  return(
+  return { changeActive, categorias }
+}
+
+
+
+export function Pagination(){
+  
+  const {changeActive, categorias} = useCategorias(opciones)
+
+  const router = useRouter();
+  const rutaActual = usePathname();
+  const categoria = categorias.filter(e => e.active)
+
+  useEffect(() => {
+    router.push(`${rutaActual}/?categoria=${categoria[0].name}`);
+  }, [categorias]);
+
+return(
     <>
       <div className="paginationContainer">
       {categorias.map(e => (
@@ -36,9 +54,6 @@ export function Pagination(){
                     className={`${e.active ? 'active' : ''} paginationElement ${lobster.className}`}
                     >{e.name}</p>
                 ))}
-      </div>
-      <div>
-        <Productos categorias={categorias}/>
       </div>
     </>
   )

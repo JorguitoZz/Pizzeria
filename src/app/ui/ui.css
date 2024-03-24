@@ -34,3 +34,36 @@
 .active{
     border-bottom: 2px solid black;
 }
+.containerProductos{
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    padding: 20px 0;
+}
+.containerProducto{
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+    width: 270px;
+}
+.productoImg{
+    display: block;
+    margin: -20px auto 0;
+}
+.productoTitle, .productoDescripcion{
+    margin: 15px 0;
+}
+.productoFooter{
+    display: flex;
+    justify-content: space-between;
+}
+.productoPrecio{
+    font-size: 20px;
+}
+.productoBoton{
+    background-color: #000;
+    color: #fff;
+    border-radius: 30px;
+    padding: 3px 15px;
+    font-size: 17px;
+}

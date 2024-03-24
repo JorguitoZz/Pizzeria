@@ -1,11 +1,14 @@
-
+import { Productos } from "../ui/Productos";
 import { lobster } from "../ui/fonts";
 import Nav from "../ui/nav";
 import { Pagination } from "../ui/pagination";
 import styles from "./page.module.css";
 
 
-export default function page (){
+export default async function page ({ searchParams}){
+    
+    console.log(searchParams)
+
     return(
         <>
             <header className={styles.header}>
@@ -18,6 +21,9 @@ export default function page (){
                 </section>
                 <section>
                     <Pagination />
+                </section>
+                <section>
+                    <Productos categoria={searchParams.categoria}/> 
                 </section>
             </main>
         </>

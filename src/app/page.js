@@ -6,6 +6,8 @@ import Image from 'next/image'
 
 
 export default function page() {
+    
+    
     return(
         <>
             <header className={styles.portada_container}>
@@ -21,7 +23,7 @@ export default function page() {
             <main>
                 <section className={styles.sectiontipo1}>
                     <div className={styles.divsection}>
-                        <h2 className={`${lobster.className} ${styles.section_title}`}>Welcome to<br/><spam className="section1_spam">Delicus pizza</spam></h2>
+                        <h2 className={`${lobster.className} ${styles.firstSection_title}`}>Welcome to<br/><spam className="section1_spam">Delicus pizza</spam></h2>
                         <p className={`${montserrat.className} ${styles.section_parrafo}`}>Donec quis lorem nulla. Nunc eu odio mi. Morbi nec lobortis est. Sed fringilla, nunc sed imperdiet lacinia, nisl ante egestas mi, ac facilisis ligula sem id neque.
                         </p>
                     </div>
